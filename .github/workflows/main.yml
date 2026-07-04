@@ -9,6 +9,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
 
       - name: Say Hello
         run: echo "Hello GitHub Actions!"
@@ -18,3 +22,4 @@ jobs:
 
       - name: List Files
         run: ls -la
+       
